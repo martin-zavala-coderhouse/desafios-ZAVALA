@@ -13,6 +13,15 @@ class ProductManager{
 
 
 
+    #asignarIdProducto(){
+        let id = 1;
+        if(this.#products.length !=0)
+        id = this.#products[this.#products.length -1 ].id + 1;
+    return id;
+    }
+
+
+
     #leerProductosInFile(){
         try {
             if (fs.existsSync(this.#path)) 
@@ -43,7 +52,7 @@ class ProductManager{
       return `El codigo ${code} ya se encuentra registrado en otro producto`;
     
 ProductManager.idProducto = ProductManager.idProducto +1;
-        const id = ProductManager.idProducto;
+        const id = this.#asignarIdProducto();
         const nuevoProducto = {
             id:id,
             title:title,
@@ -70,7 +79,7 @@ ProductManager.idProducto = ProductManager.idProducto +1;
 
 
 
-    getProductById(id){
+    getProductById(id) {
         const producto = this.#products.find(p => p.id == id);
         if (producto)
             return producto;
@@ -81,28 +90,30 @@ ProductManager.idProducto = ProductManager.idProducto +1;
 
 
 
-updateproduct(id, objetoupdate){
+updateProduct(id, objetoupdate){
     let msg = `El producto con id ${id} no existe`;
 
     const index = this.#products.findIndex(p=> p.id === id);
+
     if(index !== -1) {
         const {id, ...rest} = objetoupdate;
         this.#products[index] = {...this.#products[index], ...rest}
         this.#guardarArchivo();
         msg = 'Producto actualizado!';
     }
-
+    return msg;
 }
-deleteproduct(id){
+deleteProduct(id){
     let msg = `El producto con id ${id} no existe`;
-    const index = this.#products.findIndex(p=> p.id === id);
+    const index = this.#products.findIndex(p => p.id === id);
     if(index !== -1) {
-        this.#products = this.#products.filter(p=> p .id !== id);
+        this.#products = this.#products.filter(p => p.id !== id);
         this.#guardarArchivo();
-        msg = `Producto Eliminado!`;
+        msg = 'Producto Eliminado!';
     }
 return msg
 }
+
 }
 module.exports = ProductManager;
 

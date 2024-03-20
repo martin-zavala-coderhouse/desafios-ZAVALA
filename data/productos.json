@@ -9,7 +9,7 @@
         "stock": 20
     },
     {
-        "id": 1,
+        "id": 2,
         "title": "lapto",
         "description": "hp",
         "price": 5000,
@@ -18,12 +18,13 @@
         "stock": 25
     },
     {
-        "id": 2,
-        "title": "lapto",
-        "description": "hp",
-        "price": 5000,
+        "id": 3,
+        "title": "Lapto 3",
+        "description": "hp 39",
+        "price": "100",
         "thumbnail": "http://img1.com",
         "code": "s23hg8",
-        "stock": 25
+        "stock": 25,
+        "thumnail": "https://img10.com"
     }
 ]
