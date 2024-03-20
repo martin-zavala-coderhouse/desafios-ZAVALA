@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "title": "lapto",
+        "description": "lenovo 29",
+        "price": 5000,
+        "thumbnail": "http://img1.com",
+        "code": "s23hg6",
+        "stock": 20
+    },
+    {
+        "id": 1,
+        "title": "lapto",
+        "description": "hp",
+        "price": 5000,
+        "thumbnail": "http://img1.com",
+        "code": "s23hg7",
+        "stock": 25
+    },
+    {
+        "id": 2,
+        "title": "lapto",
+        "description": "hp",
+        "price": 5000,
+        "thumbnail": "http://img1.com",
+        "code": "s23hg8",
+        "stock": 25
+    }
+]
