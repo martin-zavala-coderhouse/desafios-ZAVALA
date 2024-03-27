@@ -7,7 +7,7 @@ class ProductManager{
     static idProducto = 0;
 
     constructor(){
-        this.#path = "./data/productos.json";
+        this.#path = "./src/data/productos.json";
         this.#products = this.#leerProductosInFile();
     }
 
