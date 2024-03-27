@@ -76,7 +76,7 @@ ProductManager.idProducto = ProductManager.idProducto +1;
     getProducts(limit = 0){
         limit = Number(limit);
         if(limit > 0)
-            //devolver la cantidad solicitada
+            return this.#products.slice(0,limit);
         return this.#products;
     }
 
